@@ -1,0 +1,21 @@
+View:
+-------
+1. create view supplier_view as select suppilers.name 
+as 'SupplierName',products.name as 'ProductName' from products 
+join suppliers on suppliers.supplierID = products.supplierID;
+
+2.create view second_view as select SupplierName, ProductName from 
+supplier_view where SupplierNmae='xyz traders' with check option;
+
+Index:
+--------
+1. show indexes from products;
+
+Subqueries:
+-----------
+1. select suppliers.name from suppliers where suppliers.supplierID not in 
+(select distinct supplierID from products where not isnull(supplierID));
+
+2. update products set supplierID=503 where productid= create table product_suppliers(prodID int,SuppID int);
+
+3. 

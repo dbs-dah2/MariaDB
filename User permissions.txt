@@ -1,0 +1,9 @@
+create user 'sush'@'localhost' identified by 'sush123';
+
+grant usage on *.* to 'sush'@'localhost' identified by sush123;
+
+grant all privileges on `dbs`.* to 'sush'@'localhost';
+
+grant select,insert,update,delete on `dbs`.* to 'sush'@'localhost';
+
+

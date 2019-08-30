@@ -1,0 +1,10 @@
+create function max_salary(deptno int) returns int return (select max(salary) from employess where employees.deptno = deptno);
+
+select max_salary(10);
+
+delimiter $
+create procedure strconcatt(IN s1 varchar(10), IN s2 varchar(10), out s3 varchar(20))
+begin
+	select concat(s1,'is working as' ,s2) into s3;
+end;
+$
